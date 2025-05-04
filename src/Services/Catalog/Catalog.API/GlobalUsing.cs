@@ -6,3 +6,4 @@ global using Carter;
 global using Mapster;
 global using FluentValidation;
 global using Common.BuildingBlocks.Behaviors;
+global using Common.BuildingBlocks.Exceptions.Handler;
