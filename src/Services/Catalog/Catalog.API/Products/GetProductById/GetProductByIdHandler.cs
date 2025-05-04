@@ -1,5 +1,4 @@
-﻿
-using Catalog.API.Exceptions;
+﻿using Catalog.API.Exceptions;
 
 namespace Catalog.API.Products.GetProducts;
 

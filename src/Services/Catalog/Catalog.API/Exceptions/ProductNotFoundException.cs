@@ -1,10 +1,8 @@
-﻿namespace Catalog.API.Exceptions
+﻿namespace Catalog.API.Exceptions;
+
+internal class ProductNotFoundException : Exception
 {
-    [Serializable]
-    internal class ProductNotFoundException : Exception
+    public ProductNotFoundException() : base("Product Not Found")
     {
-        public ProductNotFoundException() : base("Product Not Found")
-        {
-        }
     }
 }
