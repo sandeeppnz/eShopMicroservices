@@ -5,10 +5,11 @@ using MediatR;
 
 namespace Common.BuildingBlocks.Behaviors;
 
+
 public class ValidationBehavior<TRequest, TResponse>
     (IEnumerable<IValidator<TRequest>> validators)
     : IPipelineBehavior<TRequest, TResponse>
-    where TRequest : ICommand<TResponse>
+    where TRequest : ICommand<TResponse> //only applied to specific
 {
     public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, 
         CancellationToken cancellationToken)
