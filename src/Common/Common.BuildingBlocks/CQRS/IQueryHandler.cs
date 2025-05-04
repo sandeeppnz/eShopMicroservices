@@ -2,15 +2,15 @@
 
 namespace Common.BuildingBlocks.CQRS;
 
-public interface ICommandHander<in TCommand>
-    : IRequestHandler<TCommand, Unit>
-    where TCommand : ICommand<Unit>
+public interface IQueryHandler<in TQuery>
+    : IRequestHandler<TQuery, Unit>
+    where TQuery : IQuery<Unit>
 {
 }
 
-public interface ICommandHander<in TCommand, TResponse>
-    : IRequestHandler<TCommand, TResponse> 
-    where TCommand : ICommand<TResponse>
+public interface IQueryHandler<in TQuery, TResponse>
+    : IRequestHandler<TQuery, TResponse> 
+    where TQuery : IQuery<TResponse>
     where TResponse : notnull
 {
 }
