@@ -1,7 +1,6 @@
 ﻿using MediatR;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
-
 namespace Common.BuildingBlocks.Behaviors;
 
 public class LoggingBehavior<TRequest, TResponse>

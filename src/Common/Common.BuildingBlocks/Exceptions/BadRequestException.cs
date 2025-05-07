@@ -1,4 +1,4 @@
-﻿namespace Catalog.API.Exceptions;
+﻿namespace Common.BuildingBlocks.Exceptions;
 
 public class BadRequestException : Exception
 {
