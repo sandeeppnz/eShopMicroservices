@@ -1,4 +1,6 @@
-﻿namespace Catalog.API.Exceptions;
+﻿using Common.BuildingBlocks.Exceptions;
+
+namespace Catalog.API.Exceptions;
 
 public class ProductNotFoundException : NotFoundException
 {
