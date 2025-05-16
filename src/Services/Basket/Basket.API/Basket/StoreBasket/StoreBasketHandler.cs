@@ -18,6 +18,11 @@ public class StoreBasketCommandHandler
 {
     public async Task<StoreBasketResult> Handle(StoreBasketCommand command, CancellationToken cancellationToken)
     {
+        // Communicate with GRPC to get the latest discount
+
+
+
+        // Store basket with cache
         await repository.StoreBasket(command.Cart, cancellationToken);
 
         return new StoreBasketResult(command.Cart.UserName);
