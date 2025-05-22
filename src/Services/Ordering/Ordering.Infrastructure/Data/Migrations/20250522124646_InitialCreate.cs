@@ -19,9 +19,9 @@ namespace Ordering.Infrastructure.Data.Migrations
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LastModifiedAt = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastModifiedAt = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -36,9 +36,9 @@ namespace Ordering.Infrastructure.Data.Migrations
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LastModifiedAt = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastModifiedAt = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -74,9 +74,9 @@ namespace Ordering.Infrastructure.Data.Migrations
                     ShippingAddress_PostCode = table.Column<string>(type: "nvarchar(5)", maxLength: 5, nullable: false),
                     ShippingAddress_State = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LastModifiedAt = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastModifiedAt = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -99,9 +99,9 @@ namespace Ordering.Infrastructure.Data.Migrations
                     Quantity = table.Column<int>(type: "int", nullable: false),
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LastModifiedAt = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastModifiedAt = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

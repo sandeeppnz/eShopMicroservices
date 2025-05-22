@@ -9,19 +9,21 @@ public class Customer: Entity<CustomerId>
     /// <summary>
     /// Factory method
     /// </summary>
-    /// <param name="customerId"></param>
+    /// <param name="id"></param>
     /// <param name="name"></param>
     /// <param name="email"></param>
     /// <returns></returns>
-    public static Customer Create(CustomerId customerId, string name, string email)
+    public static Customer Create(CustomerId id, string name, string email)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(name);
         ArgumentException.ThrowIfNullOrWhiteSpace(email);
 
         var customer = new Customer
         {
+            Id = id,
             Name = name,
-            Email = email
+            Email = email,
+            
         };
 
         return customer;

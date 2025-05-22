@@ -3,16 +3,19 @@
 public record CustomerId
 {
     public Guid Value { get; set; }
-    private CustomerId(Guid value) => Value = value;
-
-    public static CustomerId Of(Guid customerId) 
+    private CustomerId(Guid value)
     {
-        ArgumentNullException.ThrowIfNull(customerId, nameof(customerId));
-        if(customerId == Guid.Empty)
+        Value = value;
+    }
+
+    public static CustomerId Of(Guid value) 
+    {
+        ArgumentNullException.ThrowIfNull(value, nameof(value));
+        if(value == Guid.Empty)
         {
-            throw new DomainException(nameof(customerId));
+            throw new DomainException(nameof(value));
         }
 
-        return new CustomerId(customerId);
+        return new CustomerId(value);
     }
 }

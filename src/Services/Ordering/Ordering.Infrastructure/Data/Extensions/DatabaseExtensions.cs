@@ -13,7 +13,7 @@ public static class DatabaseExtensions
 
         context.Database.MigrateAsync().GetAwaiter().GetResult();
 
-        //await SeedAsync(context);
+        await SeedAsync(context);
     }
 
     private static async Task SeedAsync(ApplicationDbContext context)
@@ -27,7 +27,8 @@ public static class DatabaseExtensions
     {
         if (!await context.Customers.AnyAsync())
         {
-            await context.Customers.AddRangeAsync(InitialData.Customers);
+            var c = InitialData.Customers;
+            await context.Customers.AddRangeAsync(c);
             await context.SaveChangesAsync();
         }
     }
