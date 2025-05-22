@@ -1,4 +1,7 @@
-﻿namespace Ordering.Infrastructure.Data.Configurations;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Ordering.Domain.Enums;
+
+namespace Ordering.Infrastructure.Data.Configurations;
 
 public class OrderConfiguration : IEntityTypeConfiguration<Order>
 {
