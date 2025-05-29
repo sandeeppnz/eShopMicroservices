@@ -15,9 +15,5 @@
       <DependentUpon>docker-compose.yml</DependentUpon>
     </None>
     <None Include="docker-compose.yml" />
-    <None Include="Services\Ordering\Ordering.Application\Orders\Commands\UpdateOrder\UpdateOrderCommand.cs" />
-    <None Include="Services\Ordering\Ordering.Application\Orders\Commands\UpdateOrder\UpdateOrderCommandValidator.cs" />
-    <None Include="Services\Ordering\Ordering.Application\Orders\Commands\UpdateOrder\UpdateOrderHandler.cs" />
-    <None Include="Services\Ordering\Ordering.Application\Orders\Commands\UpdateOrder\UpdateOrderResult.cs" />
   </ItemGroup>
 </Project>
