@@ -21,7 +21,7 @@ public class CreateOrderHandler(IApplicationDbContext dbContext)
             orderDto.Payment.CardName,
             orderDto.Payment.CardNumber,
             orderDto.Payment.Expiration,
-            orderDto.Payment.Cvv,
+            orderDto.Payment.CVV,
             orderDto.Payment.PaymentMethod
         );
 
