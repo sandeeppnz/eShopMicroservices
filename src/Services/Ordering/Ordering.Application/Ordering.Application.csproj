@@ -20,7 +20,6 @@
     <Folder Include="Orders\Commands\UpdateOrder\" />
     <Folder Include="Orders\EventHandlers\Integration\" />
     <Folder Include="Orders\Queries\GetOrders\" />
-    <Folder Include="Orders\Queries\GetOrdersByCustomer\" />
   </ItemGroup>
 
 </Project>
