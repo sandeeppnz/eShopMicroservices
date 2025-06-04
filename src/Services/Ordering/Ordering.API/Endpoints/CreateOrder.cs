@@ -8,7 +8,7 @@ namespace Ordering.API.Endpoints;
 public record CreateOrderRequest(OrderDto Order);
 public record CreateOrderResponse(Guid Id);
 
-public class CreateOrder
+public class CreateOrder: ICarterModule
 {
     public void AddRoutes(IEndpointRouteBuilder app)
     {
