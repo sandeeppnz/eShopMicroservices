@@ -23,7 +23,7 @@ public class CheckoutBasketCommandHandler
         var eventMessage = command.BasketCheckoutDto.Adapt<BasketCheckoutEvent>();
         eventMessage.TotalPrice = basket.TotalPrice;
 
-        await publishEndpoint.Publish(eventMessage, cancellationToken);
+        await publishEndpoint.Publish(eventMessage, cancellationToken); //to RabbitMQ
 
         await repository.DeleteBasket(command.BasketCheckoutDto.UserName, cancellationToken);
 

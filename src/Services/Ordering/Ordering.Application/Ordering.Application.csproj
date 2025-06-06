@@ -12,13 +12,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Common\Common.BuildingBlocks\Common.BuildingBlocks.csproj" />
+    <ProjectReference Include="..\..\..\Common\Common.Messaging\Common.Messaging.csproj" />
     <ProjectReference Include="..\Ordering.Domain\Ordering.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Orders\Commands\DeleteOrder\" />
     <Folder Include="Orders\Commands\UpdateOrder\" />
-    <Folder Include="Orders\EventHandlers\Integration\" />
   </ItemGroup>
 
 </Project>
