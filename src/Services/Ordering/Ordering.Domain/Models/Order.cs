@@ -30,7 +30,7 @@ public class Order: Aggregate<OrderId>
             Status = OrderStatus.Pending,
         };
 
-        order.AddDomainEvent(new OrderUpdatedEvent(order));
+        order.AddDomainEvent(new OrderCreatedEvent(order));
 
         return order;
     }
