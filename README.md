@@ -3,7 +3,7 @@
 This e-commerce platform is built using modular microservices—**Catalog**, **Basket**, **Discount**, and **Ordering**—each focused on a specific business function.
 
 It combines:
-- **NoSQL and relational databases** (Marten with PostgreSQL, Redis, SQL Server)
+- **NoSQL and relational databases** (Transactional DocumentDB / Marten with PostgreSQL, Redis, SQL Server)
 - **Event-driven communication** via RabbitMQ
 - **gRPC** for high-performance inter-service calls
 - **Carter** for minimal RESTful APIs
