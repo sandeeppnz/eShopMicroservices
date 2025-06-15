@@ -1,10 +1,41 @@
 # eShop microservices
 
-This e-commerce platform is composed of modular microservices for Catalog, Basket, Discount, and Ordering, each responsible for a distinct business capability. The system leverages both NoSQL databases (MongoDB, Redis) and relational databases (PostgreSQL, SQL Server) for data persistence. Microservices communicate asynchronously using RabbitMQ for event-driven messaging, and all external traffic is routed through a YARP API Gateway for centralized routing, security, and observability. The platform exposes minimal REST APIs using Carter and supports high-performance inter-service communication via gRPC.
+This e-commerce platform is composed of modular microservices for Catalog, Basket, Discount, and Ordering, each responsible for a distinct business capability. The system leverages both NoSQL databases (Marten with PostgreSQL, Redis) and relational databases (PostgreSQL, SQL Server) for data persistence. Microservices communicate asynchronously using RabbitMQ for event-driven messaging, and all external traffic is routed through a YARP API Gateway for centralized routing, security, and observability. The platform exposes minimal REST APIs using Carter and supports high-performance inter-service communication via gRPC.
 
 ![Diag2](https://github.com/user-attachments/assets/34ddcaf2-2ca4-4b6e-8834-dceeb0d3988b)
 
+## 🧱 Architecture Overview
+
+| **Architectures**            | **Patterns & Principles**                         | **Databases**                 | **Libraries**                            |
+|-----------------------------|--------------------------------------------------|-------------------------------|------------------------------------------|
+| Layered Architecture        | SOLID, DI                                       | Transactional Document DB     | Carter                                   |
+| Vertical Slice Architecture | CQRS                                            | PostgreSQL                    | Marten                                   |
+| Domain-Driven Design (DDD)  | Mediator, Proxy, Decorator, Options             | Redis                         | MediatR                                  |
+| Clean Architecture          | Pub/Sub, Caching                                | SQLite                        | Mapster                                  |
+|                             | API Gateway                                     | SQL Server                    | MassTransit, FluentValidation, EF Core, Refit |
+
+---
+
+## 🐳 Containerization and Orchestration
+
+- Dockerfiles and Docker Compose to containerize and orchestrate services.
+
+---
+
+## 🚪 API Gateway and Client
+
+- **YARP API Gateway**: Reverse proxy – gateway routing.
+- **Client**: Shopping.Web consumes APIs using the Refit library.
+
+---
+
+## 🔁 Communications
+
+- **Synchronous**: gRPC
+- **Asynchronous**: Publish/Subscribe pattern using MassTransit and RabbitMQ
+
 ## Catalog Service
+
 
 The Catalog service is implemented as a microservice and follows a Vertical Slice, RESTful architecture:
 
@@ -75,6 +106,7 @@ The Basket service is implemented as a microservice and follows a layered, RESTf
   - **C# 12:** The code uses C# 12 features (e.g., primary constructors, record types).  
   - **ASP.NET Core:** For building the web API.  
   - **Carter:** A minimal API framework for ASP.NET Core, used for routing and endpoint definitions.  
+  - **Scrutor:** Uses Scrutor to decorate IBasketRepository with CachedBasketRepository for transparent caching.  
   - **MediatR:** For implementing the mediator pattern and handling commands/queries (CQRS).  
   - **FluentValidation:** For validating commands and models.  
   - **Marten:** As the data persistence layer (document database/ORM for PostgreSQL).  
