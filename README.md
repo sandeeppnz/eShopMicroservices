@@ -1,6 +1,6 @@
 # An e-commerce platform with a microservices architecture
 
-![image](https://github.com/user-attachments/assets/95a6536f-c5dc-46d4-a674-00f238cca3c2)
+![ChatGPT Image Jun 15, 2025, 06_04_40 PM](https://github.com/user-attachments/assets/65c5f962-dce5-42e0-8130-bd9b80ad1633)
 
 ## Catalog Service
 
@@ -129,7 +129,7 @@ The YARP Gateway is implemented as an API gateway and follows a reverse proxy ar
 - **Technologies Used:**  
   - **.NET 8:** The gateway is built using .NET 8.  
   - **C# 12:** The code uses C# 12 features.  
-  - **YARP (Yet Another Reverse Proxy):** Microsoft’s reverse proxy library for .NET, providing dynamic routing and load balancing.  
+  - **YARP (Yet Another Reverse Proxy):** MicrosoftÂ’s reverse proxy library for .NET, providing dynamic routing and load balancing.  
   - **ASP.NET Core:** For hosting the gateway and middleware pipeline.  
   - **HealthChecks:** For monitoring the health of the gateway and downstream services.  
   - **Configuration Providers:** For flexible and dynamic routing configuration.  
