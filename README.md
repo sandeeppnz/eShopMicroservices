@@ -1,7 +1,8 @@
-# An e-commerce platform with a microservices architecture
+# eShop microservices
+
+This e-commerce platform is composed of modular microservices for Catalog, Basket, Discount, and Ordering, each responsible for a distinct business capability. The system leverages both NoSQL databases (MongoDB, Redis) and relational databases (PostgreSQL, SQL Server) for data persistence. Microservices communicate asynchronously using RabbitMQ for event-driven messaging, and all external traffic is routed through a YARP API Gateway for centralized routing, security, and observability. The platform exposes minimal REST APIs using Carter and supports high-performance inter-service communication via gRPC.
 
 ![Diag2](https://github.com/user-attachments/assets/34ddcaf2-2ca4-4b6e-8834-dceeb0d3988b)
-
 
 ## Catalog Service
 
