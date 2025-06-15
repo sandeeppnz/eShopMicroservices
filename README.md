@@ -2,8 +2,6 @@
 
 ![image](https://github.com/user-attachments/assets/95a6536f-c5dc-46d4-a674-00f238cca3c2)
 
-## Common Technologies
-
 ## Catalog Service
 
 The Catalog service is implemented as a microservice and follows a Vertical Slice, RESTful architecture:
