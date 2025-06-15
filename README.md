@@ -1,6 +1,7 @@
 # An e-commerce platform with a microservices architecture
 
-![ChatGPT Image Jun 15, 2025, 06_04_40 PM](https://github.com/user-attachments/assets/65c5f962-dce5-42e0-8130-bd9b80ad1633)
+![Diag2](https://github.com/user-attachments/assets/34ddcaf2-2ca4-4b6e-8834-dceeb0d3988b)
+
 
 ## Catalog Service
 
