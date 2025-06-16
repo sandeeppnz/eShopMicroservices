@@ -153,7 +153,7 @@ services:
       - ASPNETCORE_HTTPS_PORTS=8081
       - ApiSettings__GatewayAddress=http://yarpapigateway:8080
     depends_on:
-      - yarpapigateway
+      - yarpapigatway
     ports:
       - "6005:8080"
       - "6065:8081"
